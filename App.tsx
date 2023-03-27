@@ -3,22 +3,67 @@ import React from 'react';
 import { StyleSheet, Text, View, Modal, ImageBackground, Image, ScrollView } from 'react-native';
 // You can import from local files
 import Index from './src';
+import Banner from './src/components/Banner';
+import NavStack  from './src/Navigation/NavigationStack';
+// import { NavStack , MyNavBar} from './src/Navigation/NavigationStack';
 
 export default function App() {
   
   return (
-    <ScrollView contentInsetAdjustmentBehavior="automatic">
-      <View style={[styles.container]} >
-        <Text>First modification in this app</Text>
-        <Text>Second modification in this app</Text>
+
+    <Index />
+    // <ScrollView contentInsetAdjustmentBehavior="automatic">
+    //   <View style={[styles.container]} >
         
-        <Index />  
-        <StatusBar style = "auto" hidden = {false} backgroundColor = "#00BCD0" translucent = {true}/>
-      </View>
-    </ScrollView>
+    //     <Banner /> 
+    //     <Index />   
+    //     <StatusBar style = "auto" hidden = {false} backgroundColor = "#00BCD0" translucent = {true}/>
+    //   </View>
+    // </ScrollView>
   );
 }
 
+
+import { NavigationContainer } from '@react-navigation/native';
+//import { createStackNavigator } from '@react-navigation/stack';
+
+/**/import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Home from './src/screens/Home';
+import About from './src/screens/About';
+import Profile from './src/screens/Profile';
+const Stack = createNativeStackNavigator();
+function NavStack1() {
+  return (
+     <Stack.Navigator
+        screenOptions={{
+          headerTitleAlign: 'center',
+          headerStyle: {
+            backgroundColor: '#621FF7',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle :{
+            fontWeight: 'bold',
+          },
+        }}
+      >
+      <Stack.Screen 
+        name="Home" 
+        component={Home} 
+        options={{ title: 'Home' }}
+      />
+      <Stack.Screen 
+        name="About" 
+        component={About} 
+        options={{ title: 'About' }}
+      />
+      <Stack.Screen 
+       name="Profile" 
+       component={Profile} 
+       options={{ title: 'Profile Details' }}
+      />
+    </Stack.Navigator>
+  );
+}
   
 
 const styles = StyleSheet.create({

@@ -12,7 +12,7 @@ const MyImage = (url) => {
     };
 
     return (
-        <Image source={pic} style={{width: 193, height: 110}}/>
+        <Image source={url} style={{width: 193, height: 110}}/>
     );
   
 }
