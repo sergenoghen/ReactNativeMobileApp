@@ -6,7 +6,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MyImage from '../components/MyImage';
 import BlinkText from '../components/BlinkText';
 import AssetExample from '../components/AssetExample';
-import MyTextInput from '../components/MyTextInput';
+import SearchComponent from '../components/SearchComponent';
 import DisplaySearchList from '../components/DisplaySearchList';
 
 export default function Home({ navigation, route }) {
@@ -19,11 +19,14 @@ export default function Home({ navigation, route }) {
 					title="Go to About"
 					onPress={() => navigation.navigate('About')}
 				/>
+				<Button
+					title="NavBar"
+					onPress={() => navigation.navigate('NavBar')}
+				/>
 				<Text style={{margin:10}} >Content Home Screen page</Text>
 				<Text style={{margin:'auto'}} >Content Home Screen page</Text>
 				  
 				<AssetExample />
-				<MyTextInput />
 				<MyImage uri={'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'} />
 				<BlinkText />
 			</TouchableOpacity>

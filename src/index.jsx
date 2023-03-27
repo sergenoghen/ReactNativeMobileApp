@@ -3,7 +3,7 @@ import { View, Text , Button, Image, Modal, StyleSheet, MenuBar} from "react-nat
 import MyImage from './components/MyImage';
 import BlinkText from './components/BlinkText';
 import AssetExample from './components/AssetExample';
-import MyTextInput from './components/MyTextInput';
+import MyTextInput from './components/SearchComponent';
 import Home from './screens/Home';
 import About from './screens/About';
 import Profile from './screens/Profile';

@@ -10,6 +10,7 @@ import About from '../screens/About';
 import Profile from '../screens/Profile';
 import Details from '../screens/Details';
 import Contact from '../screens/Contact';
+import SearchComponent from '../components/SearchComponent';
 import NavBar from './NavBar';
 
 
@@ -69,6 +70,11 @@ function NavigationStack() {
         name="NavBar" 
         component={NavBar} 
         options={{ title: 'NavBar' }}
+      />
+      <Stack.Screen 
+        name="SearchComponent" 
+        component={SearchComponent} 
+        options={{ title: 'SearchComponent' }}
       />
     </Stack.Navigator>
   );

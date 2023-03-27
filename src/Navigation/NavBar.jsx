@@ -4,12 +4,6 @@ import RenderHtml from 'react-native-render-html';
 //import NavigationBar from 'react-native-navbar';
 //import isAbsolute  from 'absolute-path';
 
-import Home from '../screens/Home';
-import About from '../screens/About';
-import Profile from '../screens/Profile';
-import Details from '../screens/Details';
-import Contact from '../screens/Contact';
-
 
 
 import {NavigationContainer, useNavigation} from '@react-navigation/native';
@@ -24,11 +18,31 @@ const Stack = createNativeStackNavigator();
 const NavBar = ({ navigation, route }) => {
     const someData=[];
   return (
-    <View>
+    <View style={styles.container}>
       <Button
-          title="About"
-					onPress={() => navigation.navigate('About')}
-				/>
+        title="Home"
+        onPress={() => navigation.navigate('Home')}
+      />
+      <Button
+        title="About"
+        onPress={() => navigation.navigate('About')}
+      />
+      <Button
+        title="Profile"
+        onPress={() => navigation.navigate('Profile')}
+      />
+      <Button
+        title="search"
+        onPress={() => navigation.navigate('SearchComponent')}
+      />
+      <Button
+        title="Details"
+        onPress={() => navigation.navigate('Details')}
+      />
+      <Button
+        title="contact"
+        onPress={() => navigation.navigate('Contact')}
+      />
     </View>
   );
   
@@ -40,7 +54,12 @@ const NavBar = ({ navigation, route }) => {
 
   const styles = {
     container: {
+      flexDirection: 'row',
+      wrap: 'nowrap',
     },
+    button:{
+
+    }
   };
    
   const rightButtonConfig = {
