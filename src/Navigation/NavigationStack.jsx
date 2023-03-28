@@ -74,7 +74,7 @@ function NavigationStack() {
       <Stack.Screen 
         name="SearchComponent" 
         component={SearchComponent} 
-        options={{ title: 'SearchComponent' }}
+        options={{ title: 'Search' }}
       />
     </Stack.Navigator>
   );
