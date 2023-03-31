@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {Alert, Modal, StyleSheet, Text, Pressable, View} from 'react-native';
+import  List  from './SearchList';
 
 const MyModal = ({data}) => {
   const [modalVisible, setModalVisible] = useState(false);
@@ -24,7 +25,11 @@ const MyModal = ({data}) => {
                 <View style={styles.centeredView}>
                     <View style={styles.modalView}>
 
-                        <Text style={styles.modalText}>{data}</Text>
+                        <Text style={styles.modalText}>
+                            {List.CakeType[data].batters.batter.map((a)=>{
+                                return a.type+'\n'
+                            })}
+                        </Text>
 
                         <Pressable
                             style={[styles.button, styles.buttonClose]}

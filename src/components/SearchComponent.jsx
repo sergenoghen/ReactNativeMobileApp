@@ -18,7 +18,7 @@ export default class SearchComponent extends Component {
     const found = 
     List.CakeType.map((val, key) => {
       if(text.length > 0 && val.name.startsWith(text)){
-        return val.name;
+        return key//{name:val.name, value:val};
       }
     });
     
@@ -42,10 +42,10 @@ export default class SearchComponent extends Component {
           onChangeText={(text) => this.stateChanged(text)}
           value={this.state.text} />
         <View style={{ padding: 10, fontSize: 20 }}>
-          {this.state.found.length == 0 ? 'No results' : this.state.found.map((e) => {
-            if (e)
+          {this.state.found.length == 0 ? 'No results' : this.state.found.map((index) => {
+            if ( index)
               return (
-                <MyModal data={this.parentToChild(e)}/> 
+                <MyModal data={this.parentToChild(index)}/> 
               );
           })}
         </View>
