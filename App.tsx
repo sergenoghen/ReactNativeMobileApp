@@ -1,17 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, Modal, ImageBackground, Image, ScrollView } from 'react-native';
+import React, {useState} from 'react';
+import {Alert, Modal, StyleSheet, Text, Pressable, View} from 'react-native';
 // You can import from local files
 import Index from './src';
 import Banner from './src/components/Banner';
 import NavStack  from './src/Navigation/NavigationStack';
+
+
+
 // import { NavStack , MyNavBar} from './src/Navigation/NavigationStack';
 
 export default function App() {
   
   return (
 
+
+    
     <Index />
+    
     // <ScrollView contentInsetAdjustmentBehavior="automatic">
     //   <View style={[styles.container]} >
         
