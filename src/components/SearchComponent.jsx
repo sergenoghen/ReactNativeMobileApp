@@ -33,7 +33,6 @@ export default class SearchComponent extends Component {
 
 
   render() {
-
     return (
       <View style={{ padding: 10 }}>
         <TextInput
@@ -41,12 +40,20 @@ export default class SearchComponent extends Component {
           placeholder="Type here to search in the list!"
           onChangeText={(text) => this.stateChanged(text)}
           value={this.state.text} />
+          
         <View style={{ padding: 10, fontSize: 20 }}>
-          {this.state.found.length == 0 ? 'No results' : this.state.found.map((index) => {
-            if ( index)
+          
+          {this.state.found.length == 0 ? 'No results' : this.state.found.filter((x) => {return x !=null}).map((index) => {
+            if(parseInt(index) >= 0){
               return (
-                <MyModal data={this.parentToChild(index)}/> 
+                 <MyModal data={this.parentToChild(index)}/> 
+                );
+            }else
+            {
+              return (
+                <Text> No results found </Text>
               );
+            }
           })}
         </View>
 

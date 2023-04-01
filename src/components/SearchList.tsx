@@ -103,8 +103,8 @@ const  SearchList = [
         {
           "batter":
             [
-              { "id": "1001", "type": "Regular" },
-              { "id": "1002", "type": "Chocolate" }
+              { "id": "1001", "type": "Regular 2" },
+              { "id": "1002", "type": "Chocolate 2" }
             ]
         },
       "topping":
