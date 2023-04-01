@@ -5,6 +5,7 @@ import {Alert, Modal, StyleSheet, Text, Pressable, View} from 'react-native';
 import Index from './src';
 import Banner from './src/components/Banner';
 import NavStack  from './src/Navigation/NavigationStack';
+import Menu  from './src/templates/Menu' 
 
 
 
@@ -14,10 +15,9 @@ export default function App() {
   
   return (
 
+    <Menu />
+     //     <Index /> 
 
-    
-    <Index />
-    
     // <ScrollView contentInsetAdjustmentBehavior="automatic">
     //   <View style={[styles.container]} >
         
