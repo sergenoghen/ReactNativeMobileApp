@@ -7,17 +7,17 @@ import { Picker } from "@react-native-picker/picker";
 
 export default class SearchComponent extends Component {
   
-  constructor(props) {
+  constructor(props: {} | Readonly<{}>) {
     super(props);
     this.state = {text: '', found:[''], datat:{}};
     //const  [data, setData] = useState('');
   }
 
   
-  stateChanged(text){
+  stateChanged(text: string | any[]){
     const found = 
     List.CakeType.map((val, key) => {
-      if(text.length > 0 && val.name.startsWith(text)){
+      if(text.length > 0 && val.name.startsWith(text+'')){
         return key//{name:val.name, value:val};
       }
     });
@@ -26,7 +26,7 @@ export default class SearchComponent extends Component {
   }
 
   
-  parentToChild = (data) => {
+  parentToChild = (data: any) => {
     return data;
   }
 
@@ -43,7 +43,7 @@ export default class SearchComponent extends Component {
           
         <View style={{ padding: 10, fontSize: 20 }}>
           
-          {this.state.found.length == 0 ? 'No results' : this.state.found.filter((x) => {return x !=null}).map((index) => {
+          {this.state.found.length == 0 ? 'No results' : this.state.found.filter((x: null) => {return x !=null}).map((index: string) => {
             if(parseInt(index) >= 0){
               return (
                  <MyModal data={this.parentToChild(index)}/> 

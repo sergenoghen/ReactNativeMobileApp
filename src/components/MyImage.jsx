@@ -3,7 +3,8 @@ import { View, Image} from "react-native";
 
  const styles = {
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+  marginTop: 100
 };
 
 const MyImage = (url) => {
@@ -12,7 +13,9 @@ const MyImage = (url) => {
     };
 
     return (
-        <Image source={url} style={{width: 193, height: 110}}/>
+        <View style={styles}>
+            <Image source={pic} style={{width: 193, height: 110}}/>
+        </View>
     );
   
 }

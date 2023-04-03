@@ -1,0 +1,6 @@
+https://github.com/jemise111/react-native-swipe-list-view
+
+https://www.positronx.io/react-native-navigation-example-tutorial/
+
+https://reactnative.dev/docs/animations
+

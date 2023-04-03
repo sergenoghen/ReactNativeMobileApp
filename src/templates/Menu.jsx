@@ -26,14 +26,14 @@ export default class Menu extends Component {
             <NavigationContainer>
                 <Stack.Navigator
                     screenOptions={{
-                    headerTitleAlign: 'center',
-                    headerStyle: {
-                        backgroundColor: '#621FF7',
-                    },
-                    headerTintColor: '#fff',
-                    headerTitleStyle :{
-                        fontWeight: 'bold',
-                    },
+                        headerTitleAlign: 'center',
+                        headerStyle: {
+                            backgroundColor: '#621FF7',
+                        },
+                        headerTintColor: '#fff',
+                        headerTitleStyle :{
+                            fontWeight: 'bold',
+                        },
                     }}
                 >
                     {

@@ -1,7 +1,7 @@
 import { View , Text, Button } from 'react-native';
 import Negotiator from 'negotiator';
 import RenderHtml from 'react-native-render-html';
-//import NavigationBar from 'react-native-navbar';
+import NavigationBar from 'react-native-navbar';
 //import isAbsolute  from 'absolute-path';
 
 
@@ -12,6 +12,7 @@ import {NavigationContainer, useNavigation} from '@react-navigation/native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SwitchRouter } from 'react-navigation';
+import  routes  from '../templates/Routes';
 
 
 const Stack = createNativeStackNavigator();
@@ -19,30 +20,19 @@ const NavBar = ({ navigation, route }) => {
     const someData=[];
   return (
     <View style={styles.container}>
-      <Button
-        title="Home"
-        onPress={() => navigation.navigate('Home')}
-      />
-      <Button
-        title="About"
-        onPress={() => navigation.navigate('About')}
-      />
-      <Button
-        title="Profile"
-        onPress={() => navigation.navigate('Profile')}
-      />
-      <Button
-        title="search"
-        onPress={() => navigation.navigate('SearchComponent')}
-      />
-      <Button
-        title="Details"
-        onPress={() => navigation.navigate('Details')}
-      />
-      <Button
-        title="contact"
-        onPress={() => navigation.navigate('Contact')}
-      />
+      {
+        routes.map((route)=>{
+          //console.log(routes[0])
+          return(
+            <View style={styles.button}>
+              <Button
+                title={route.options.title}
+                onPress={() => navigation.navigate(route.name)}
+              />
+            </View>
+          )
+        })
+      }
     </View>
   );
   
@@ -54,11 +44,17 @@ const NavBar = ({ navigation, route }) => {
 
   const styles = {
     container: {
-      flexDirection: 'row',
-      wrap: 'nowrap',
+      flexDirection:'row',
+      flexWrap: "wrap",
+      height: 'auto',
+      position:'relative',
+      left:1,
+      margin:'auto',
+      float:'right',
     },
     button:{
-
+      width: 100,
+      margin: 2,
     }
   };
    
