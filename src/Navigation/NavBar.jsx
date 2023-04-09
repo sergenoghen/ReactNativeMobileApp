@@ -1,7 +1,10 @@
-import { View , Text, Button } from 'react-native';
+
 import Negotiator from 'negotiator';
 import RenderHtml from 'react-native-render-html';
 import NavigationBar from 'react-native-navbar';
+import { Text, View, SafeAreaView, ScrollView, Dimensions, Image, Button } from 'react-native';
+import { createDrawerNavigator, DrawerItems, createAppContainer } from 'react-navigation';
+//import { Icon } from 'native-base';
 //import isAbsolute  from 'absolute-path';
 
 

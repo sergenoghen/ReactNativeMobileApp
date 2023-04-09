@@ -4,6 +4,7 @@ import { Movie} from '../model/Movie'
 import RequestService  from '../typeScript/Api/ApiRequest';
 import { from, firstValueFrom, map } from 'rxjs';
 import { Customer } from '../model/Customer';
+import SafeAreaViewTable from './SafeAreaViewTable';
 
 const MyMovies = {
     "title": "The Basics - Networking",
@@ -22,15 +23,24 @@ class ViewMovie extends Component {
   
   // 
 
-   getData = ()=>{
+   getData1 = async ()=>{
+       await new RequestService().sendXMLHttpRequest()
+     .then(
+       d => {
+         console.log(d); 
+         return d;
+       }
+     )
+  }
+
+  getData = ()=>{
     return from(
-      new RequestService().getMoviesFromApi().then((customers)=>{
-        return customers;
+      new RequestService().getMoviesFromApi().then((films)=>{
+        
+        return films;
       })
     ).pipe(
       map(d=>{
-        console.log('data = ');
-        console.log( d);
         return d;
       })
     )
@@ -38,41 +48,57 @@ class ViewMovie extends Component {
 
   
   showData = ()=>{
-    this.getData().subscribe((movies)=>{
-      console.log('Les donnees sont : '+ movies);
-      this.setState({movies})
-      
-      return movies;
-    })
+    this.getData()
+    .subscribe((films)=>{
+        const filmsData = 'films.movies';
+        this.setState({films,filmsData});
+        console.log(filmsData)
+        if(films) 
+        return films;
+      })
+    
   }
    
   constructor(props: {} | Readonly<{}>) {
     super(props);
-    this.state = {movies:[{}]};
+    this.state = {films:[''], filmsData:[{}]};
     this.showData();
   }
 
   render() {
-      //const [data, setData] = useState<[]>([]);
+    let keysDataArray = Object.keys(this.state.films[0]); 
+    let valuesDataArray:[] = this.state.films.map((a)=>{
+      return a
+    });
+    console.log('valuesDataArray');
+    console.log(valuesDataArray[0]);
+    
      return (
       <View>
         <Text>
-          Movies
+          La liste
         </Text>
-        {/* <Text>
+       
+        <Text>
           {
-            this.state.movies.map(d=>{
-              return (
-                <View>
-                    
-                  <Text>
-                    {d}
-                  </Text>
-                </View>
-              )
-            })
-          }
-        </Text> */}
+            // (Object.values(this.state.films)).map(a=>{
+            //   return(
+            //     <View>
+            //       <Text>
+            //         { 
+            //           'ID=>'+a.toString()+'\n'
+            //           +' Year=>'+' Title=>'
+            //           +a.CustomerName+' Year=>'
+            //           +a.ContactName 
+            //         }
+            //       </Text>
+            //     </View>
+            //   )
+            // })       
+           }
+        </Text>
+        
+        <SafeAreaViewTable data={{'k':keysDataArray,'v': this.state.films}} />
         
       </View>
     );

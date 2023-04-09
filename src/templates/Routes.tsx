@@ -13,6 +13,7 @@ import SearchComponent from '../components/SearchComponent';
 import AssetExample from "../components/AssetExample";
 import Banner from "../components/Banner";
 import MyImage from "../components/MyImage";
+import MapIndex from "../../mapAr/mapLibre/MapIndex";
 
 //List of routes
 const routes : Route[]  = [
@@ -80,6 +81,11 @@ const routes : Route[]  = [
         name:'MyImage',
         component:MyImage,
         options:{ title: 'MyImage' },
+    },
+    {
+        name:'MapIndex',
+        component:MapIndex,
+        options:{ title: 'MapIndex' },
     },
 ];
 

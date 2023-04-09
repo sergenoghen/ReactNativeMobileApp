@@ -4,3 +4,6 @@ https://www.positronx.io/react-native-navigation-example-tutorial/
 
 https://reactnative.dev/docs/animations
 
+https://www.npmjs.com/package/rxjs-http-client?activeTab=readme
+
+my api key for https://positionstack.com/dashboard :  730ef9f839b35d699719fb08061a0157
