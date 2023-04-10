@@ -1,25 +1,12 @@
-import Home from '../screens/Home';
 
-import react, { Component } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SwitchRouter } from 'react-navigation';
-import { Button, Text, TextInput, View, Modal } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import  routes  from '../templates/Routes';
 
 
-
-export default class Menu extends Component {
+const Menu =  ({routes})=> {
     
-  constructor(props) {
-    super(props);
-    this.state = {text: '', found:[''], datat:{}};
-  }
 
-
-
-    render (){
-        
         const Stack = createNativeStackNavigator();
         
         return (
@@ -51,6 +38,8 @@ export default class Menu extends Component {
                 </Stack.Navigator>
             </NavigationContainer>
         );
-    }
+    
 }
+
+export default Menu;
   

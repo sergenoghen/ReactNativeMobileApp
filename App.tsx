@@ -2,20 +2,21 @@ import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import {Alert, Modal, StyleSheet, Text, Pressable, View} from 'react-native';
 // You can import from local files
-import Index from './src';
-import Banner from './src/components/Banner';
-import NavStack  from './src/Navigation/NavigationStack';
-import Menu  from './src/templates/Menu' 
+import Index from './sampleApp/Index';
+import Banner from './sampleApp/src/components/Banner';
+import NavStack  from './NavigationStack';
+import Menu  from './sampleApp/src/templates/Menu' ;
+import  routes  from './sampleApp/src/templates/Routes';
 
 
 
-// import { NavStack , MyNavBar} from './src/Navigation/NavigationStack';
+// import { NavStack , MyNavBar} from './Navigation/NavigationStack';
 
 export default function App() {
   
   return (
 
-    <Menu />
+    <Menu routes={routes} />
      //     <Index /> 
 
     // <ScrollView contentInsetAdjustmentBehavior="automatic">
@@ -34,9 +35,9 @@ import { NavigationContainer } from '@react-navigation/native';
 //import { createStackNavigator } from '@react-navigation/stack';
 
 /**/import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from './src/screens/Home';
-import About from './src/screens/About';
-import Profile from './src/screens/Profile';
+import Home from './sampleApp/src/screens/Home';
+import About from './sampleApp/src/screens/About';
+import Profile from './sampleApp/src/screens/Profile';
 const Stack = createNativeStackNavigator();
 function NavStack1() {
   return (

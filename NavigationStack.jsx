@@ -5,13 +5,13 @@ import RenderHtml from 'react-native-render-html';
 //import isAbsolute  from 'absolute-path';
       
 
-import Home from '../screens/Home';
-import About from '../screens/About';
-import Profile from '../screens/Profile';
-import Details from '../screens/Details';
-import Contact from '../screens/Contact';
-import SearchComponent from '../components/SearchComponent';
-import NavBar from './NavBar';
+import Home from '../../screens/Home';
+import About from '../../screens/About';
+import Profile from '../../screens/Profile';
+import Details from '../../screens/Details';
+import Contact from '../../screens/Contact';
+import SearchComponent from './sampleApp/src/components/SearchComponent';
+import NavBar from './sampleApp/src/Navigation/NavBar';
 
 
 

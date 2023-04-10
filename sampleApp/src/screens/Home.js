@@ -3,11 +3,11 @@ import { useNavigation } from "@react-navigation/native";
 import {NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import MyImage from '../components/MyImage';
-import BlinkText from '../components/BlinkText';
-import AssetExample from '../components/AssetExample';
-import SearchComponent from '../components/SearchComponent';
-import DisplaySearchList from '../components/DisplaySearchList';
+import MyImage from '../sampleApp/components/MyImage';
+import BlinkText from '../sampleApp/components/BlinkText';
+import AssetExample from '../sampleApp/components/AssetExample';
+import SearchComponent from '../sampleApp/components/SearchComponent';
+import DisplaySearchList from '../sampleApp/components/DisplaySearchList';
 
 export default function Home({ navigation, route }) {
 	return (

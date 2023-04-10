@@ -1,9 +1,9 @@
 import React, { Component, useState, useEffect } from 'react';
 import { ActivityIndicator, FlatList, Text, View } from 'react-native';
-import { Movie} from '../model/Movie'
+import { Movie} from '../sampleApp/model/Movie'
 import RequestService  from '../typeScript/Api/ApiRequest';
 import { from, firstValueFrom, map } from 'rxjs';
-import { Customer } from '../model/Customer';
+import { Customer } from '../sampleApp/model/Customer';
 import SafeAreaViewTable from './SafeAreaViewTable';
 
 const MyMovies = {
@@ -98,7 +98,7 @@ class ViewMovie extends Component {
            }
         </Text>
         
-        <SafeAreaViewTable data={{'k':keysDataArray,'v': this.state.films}} />
+        <SafeAreaViewTable data={{'k':keysDataArray,'v': this.state.films}} /> 
         
       </View>
     );

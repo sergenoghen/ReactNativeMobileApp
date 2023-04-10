@@ -1,13 +1,13 @@
-import MapLibreGL from "@maplibre/maplibre-react-native";
 import React, {Component} from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Text} from 'react-native';
+import { environment } from '../../environnement/environnement';
 
 // Will be null for most users (only Mapbox authenticates this way).
 // Required on Android. See Android installation notes.
-MapLibreGL.setAccessToken(null);
 
-MapLibreGL.setConnected(true);
-MapLibreGL.setAccessToken(null);
+//MapLibreGL.setAccessToken(environment.maplibreApiKey );
+// MapLibreGL.setConnected(true);
+
 
 const styles = StyleSheet.create({
   page: {
@@ -22,15 +22,20 @@ const styles = StyleSheet.create({
   },
 });
 
-export default class MapIndex extends Component {
+export default class MapLibreIndex extends Component {
   render() {
+    console.log();
+    
     return (
       <View style={styles.page}>
-        <MapLibreGL.MapView
+        <Text id='map' >
+          Allo maplibre
+        </Text>
+        
+        {/* <MapLibreGL.MapView
           style={styles.map}
           logoEnabled={false} 
-          styleURL="https://demotiles.maplibre.org/style.json"
-        />
+        /> */}
       </View>
     );
   }

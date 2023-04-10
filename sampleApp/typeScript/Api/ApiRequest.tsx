@@ -3,8 +3,8 @@
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, map, mergeMap, retry } from 'rxjs/operators';
 import { environment } from '../../environnement/environnement';
-import { Movie} from '../../model/Movie';
-import { Customer} from '../../model/Customer';
+import { Movie} from '../../sampleApp/model/Movie';
+import { Customer} from '../../sampleApp/model/Customer';
 import { HttpResponse, RxJSHttpClient } from 'rxjs-http-client';
 
 import * as Network from 'expo-network';
