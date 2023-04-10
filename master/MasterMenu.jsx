@@ -4,7 +4,6 @@ import { NavigationContainer } from '@react-navigation/native';
 
 
 const MasterMenu =  ({routes})=> {
-    
         const Stack = createNativeStackNavigator();
         
         return (

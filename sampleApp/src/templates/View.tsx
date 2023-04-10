@@ -1,9 +1,9 @@
 import React, { Component, useState, useEffect } from 'react';
 import { ActivityIndicator, FlatList, Text, View } from 'react-native';
-import { Movie} from '../sampleApp/model/Movie'
-import RequestService  from '../typeScript/Api/ApiRequest';
+import { Movie} from '../model/Movie'
+import RequestService  from '../../typeScript/Api/ApiRequest';
 import { from, firstValueFrom, map } from 'rxjs';
-import { Customer } from '../sampleApp/model/Customer';
+import { Customer } from '../model/Customer';
 import SafeAreaViewTable from './SafeAreaViewTable';
 
 const MyMovies = {

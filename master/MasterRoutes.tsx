@@ -1,11 +1,11 @@
 import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
-import { Route } from './sampleApp/typeScript/routes/Model';
-import Menu from "./sampleApp/src/templates/Menu";
-import ArMenu from "./arApp/ArMenu";
-import MapMenu from "./mapApp/MapMenu";
+import { Route } from '../sampleApp/typeScript/routes/Model';
+import Menu from "../sampleApp/src/templates/Menu";
+import ArMenu from "../arApp/src/menu/ArMenu";
+import MapMenu from "../mapApp/MapMenu";
 
 //List of routes
-const routes : Route[]  = [
+const MasterRoutes : Route[]  = [
     {
         name:'Menu',
         component:Menu,
@@ -25,4 +25,4 @@ const routes : Route[]  = [
 ];
 
 //getFocusedRouteNameFromRoute:''
- export default routes;
+ export default MasterRoutes;

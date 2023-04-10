@@ -6,7 +6,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 const Menu =  ({routes})=> {
     
-
+console.log(routes);
         const Stack = createNativeStackNavigator();
         
         return (
@@ -24,7 +24,7 @@ const Menu =  ({routes})=> {
                     }}
                 >
                     {
-                        routes.map((route)=>{
+                        [].map((route)=>{
                             return(
                                 
                                 <Stack.Screen 

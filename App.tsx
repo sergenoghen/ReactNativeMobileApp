@@ -2,11 +2,12 @@ import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import {Alert, Modal, StyleSheet, Text, Pressable, View} from 'react-native';
 // You can import from local files
-import Index from './sampleApp/Index';
-import Banner from './sampleApp/src/components/Banner';
 import NavStack  from './NavigationStack';
-import Menu  from './sampleApp/src/templates/Menu' ;
-import  routes  from './sampleApp/src/templates/Routes';
+//import Menu  from './sampleApp/src/templates/Menu' ;
+//import MasterMenu  from './master/MasterMenu' ;
+import  ArRoutes  from './';
+//import  MasterRoutes  from './master/MasterRoutes';
+import ArrMenu  from './arApp/src/menu/ArMenu'
 
 
 
@@ -15,18 +16,7 @@ import  routes  from './sampleApp/src/templates/Routes';
 export default function App() {
   
   return (
-
-    <Menu routes={routes} />
-     //     <Index /> 
-
-    // <ScrollView contentInsetAdjustmentBehavior="automatic">
-    //   <View style={[styles.container]} >
-        
-    //     <Banner /> 
-    //     <Index />   
-    //     <StatusBar style = "auto" hidden = {false} backgroundColor = "#00BCD0" translucent = {true}/>
-    //   </View>
-    // </ScrollView>
+    <ArrMenu routes={MasterRoutes} />
   );
 }
 

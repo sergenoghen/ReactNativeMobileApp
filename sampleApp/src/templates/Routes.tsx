@@ -1,19 +1,18 @@
 import { getFocusedRouteNameFromRoute } from "@react-navigation/native";
-import { Route } from '../typeScript/routes/Model'
-import Home from '../sampleApp/screens/Home';
-import About from '../sampleApp/screens/About';
-import Profile from '../sampleApp/screens/Profile';
-import Details from '../sampleApp/screens/Details';
-import Contact from '../sampleApp/screens/Contact';
-import NavBar from '../sampleApp/Navigation/NavBar';
+import { Route } from '../../typeScript/routes/Model'
+import Home from '../screens/Home';
+import About from '../screens/About';
+import Profile from '../screens/Profile';
+import Details from '../screens/Details';
+import Contact from '../screens/Contact';
+import NavBar from '../Navigation/NavBar';
 import ViewMovie from '../templates/View';
 import Section from '../templates/Section';
 import Page from '../templates/Page';
-import SearchComponent from '../sampleApp/components/SearchComponent';
-import AssetExample from "../sampleApp/components/AssetExample";
-import Banner from "../sampleApp/components/Banner";
-import MyImage from "../sampleApp/components/MyImage";
-import MapLibreIndex from "../../mapAr/mapLibre/MapLibreIndex";
+import SearchComponent from '../components/SearchComponent';
+import AssetExample from "../components/AssetExample";
+import Banner from "../components/Banner";
+import MyImage from "../components/MyImage";
 
 //List of routes
 const routes : Route[]  = [
@@ -81,11 +80,6 @@ const routes : Route[]  = [
         name:'MyImage',
         component:MyImage,
         options:{ title: 'MyImage' },
-    },
-    {
-        name:'MapLibre',
-        component:MapLibreIndex,
-        options:{ title: 'MapLibre' }, 
     },
     
 ];

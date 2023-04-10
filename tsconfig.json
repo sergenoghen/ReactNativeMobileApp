@@ -4,5 +4,5 @@
     "strict": true
   },
   
-  "include": ["src"],
+  "include": ["sampleApp/src"],
 }

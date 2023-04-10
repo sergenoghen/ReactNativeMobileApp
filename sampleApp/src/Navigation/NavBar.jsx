@@ -15,7 +15,7 @@ import {NavigationContainer, useNavigation} from '@react-navigation/native';
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SwitchRouter } from 'react-navigation';
-import  routes  from '../../templates/Routes';
+import  routes  from '../templates/Routes';
 
 
 const Stack = createNativeStackNavigator();
