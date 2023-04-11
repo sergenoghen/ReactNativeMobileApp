@@ -13,9 +13,10 @@ import SearchComponent from '../components/SearchComponent';
 import AssetExample from "../components/AssetExample";
 import Banner from "../components/Banner";
 import MyImage from "../components/MyImage";
+import GeoIndex from "../../../geolocation/GeoIndex";
 
 //List of routes
-const routes : Route[]  = [
+const Routes : Route[]  = [
     {
         name:'Home',
         component:Home,
@@ -81,8 +82,13 @@ const routes : Route[]  = [
         component:MyImage,
         options:{ title: 'MyImage' },
     },
+    {
+        name:'GeoIndex',
+        component:GeoIndex,
+        options:{ title: 'GeoIndex' },
+    },
     
 ];
 
 //getFocusedRouteNameFromRoute:''
- export default routes;
+ export default Routes;
